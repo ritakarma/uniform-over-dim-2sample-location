@@ -19,12 +19,12 @@ high-dimensional data. [arxiv preprint](https://arxiv.org/abs/2403.16328)
 
 # Example usage
 
-To run the two sample test on the data matrices `dataX` and `dataY` using the spatial kernel and 10000 simulations for cut-off estimation, run 
+To run the two sample test on the data matrices `dataX` and `dataY` using the spatial kernel and 10000 simulations for cut-off estimation, run the code
 ```r
 result <- perform_test(dataX = dataX, dataY = dataY, h = h_spatial, estimators = c(1,0), nsim = 10000)
 print(result)
 ```
-To use tapering estimator parameters 0.1, 0.25 and 0.4, run
+To use tapering estimator based test with parameter values 0.1, 0.25 and 0.4, run the script
 ```r
 result <- perform_test(dataX = dataX, dataY = dataY, h = h_spatial, estimators = c(0,1), nsim = 10000, vec_beta = c(0.1, 0.25, 0.4))
 print(result)
