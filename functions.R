@@ -257,6 +257,7 @@ choi_marden_2sample <- function(dataX, dataY, h = h_spatial) {
   n1 = nrow(dataX)
   n2 = nrow(dataY)
   n = n1 + n2
+  p = ncol(dataX)
   
   #### Calculating Sigma_hat
   
