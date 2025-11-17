@@ -24,14 +24,14 @@ To run the two sample test on the data matrices `dataX` and `dataY` using the sp
 result <- perform_test(dataX = dataX, dataY = dataY, h = h_spatial, estimators = c(1,0), nsim = 10000)
 print(result)
 ```
-To use tapering estimator based test with parameter values 0.1, 0.25 and 0.4, run the script
+To use tapering estimator based test with parameter values 0.1, 0.25 and 0.4, run the script:
 ```r
 result <- perform_test(dataX = dataX, dataY = dataY, h = h_spatial, estimators = c(0,1), nsim = 10000, vec_beta = c(0.1, 0.25, 0.4))
 print(result)
 ```
-In this case, an array of 3 p-values is returned. To use the difference kernel and both plain and tapering estimators run,
+In this case, an array of 3 p-values is returned. To use the difference kernel and both plain and tapering estimators, run:
 ```r
 result <- perform_test(dataX = dataX, dataY = dataY, h = h_diff, estimators = c(1,1), nsim = 10000, vec_beta = c(0.1, 0.25, 0.4))
 print(result)
 ```
-In this case, an array of 4 p-values is returned with the first element corresponding to the plain estimator based test and the remaining elements corresponding to the tapering estimator based tests. To perform the simulation study or real data analysis, run the relevant script mentioned above.
+In this case, an array of 4 p-values is returned with the first element corresponding to the plain estimator based test and the remaining elements corresponding to the tapering estimator based tests. To perform the simulation study or real data analysis, run the relevant script file mentioned earlier.
